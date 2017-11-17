@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liboauth2", "liboauth2.vcxproj", "{40B8E37F-6553-4EFF-98FD-578E620BC86E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40B8E37F-6553-4EFF-98FD-578E620BC86E}.Debug|x64.ActiveCfg = Debug|x64
+		{40B8E37F-6553-4EFF-98FD-578E620BC86E}.Debug|x64.Build.0 = Debug|x64
+		{40B8E37F-6553-4EFF-98FD-578E620BC86E}.Debug|x86.ActiveCfg = Debug|Win32
+		{40B8E37F-6553-4EFF-98FD-578E620BC86E}.Debug|x86.Build.0 = Debug|Win32
+		{40B8E37F-6553-4EFF-98FD-578E620BC86E}.Release|x64.ActiveCfg = Release|x64
+		{40B8E37F-6553-4EFF-98FD-578E620BC86E}.Release|x64.Build.0 = Release|x64
+		{40B8E37F-6553-4EFF-98FD-578E620BC86E}.Release|x86.ActiveCfg = Release|Win32
+		{40B8E37F-6553-4EFF-98FD-578E620BC86E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0E35A6C-857E-4A06-BBA2-6D418E1BAB4A}
+	EndGlobalSection
+EndGlobal
