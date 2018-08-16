@@ -10,7 +10,7 @@
 *  Last updated
 *  08/16/2018 removed dependency of libaulstring.lib
 *  Version 0.1-beta
-* 
+*  Version 0.2-beta
 *  Dependencies: restbed, libjson
 */
 #include <std_oauth_v2.hpp>
@@ -79,7 +79,7 @@ std::string std::oauth_v2::builder::access_auth_code(std::string const & auth_se
    data.append("&code=").append(auth_code);
    data.append("&redirect_uri=").append(m_config->redirect_uri);
    /* make call */
-   auto req = make_shared<http_request>(builder_uri(data));
+   auto req = make_shared<http_request>(builder_uri{ data });
    auto res = http::sync(req);
    auto body = res->get_body();
    /**/
@@ -98,7 +98,7 @@ std::string std::oauth_v2::builder::access_resource_owner(std::string const & au
    data.append("&username=").append(user_name);
    data.append("&password=").append(password);
    /* make call uri */
-   auto req = make_shared<http_request>(builder_uri(data));
+   auto req = make_shared<http_request>(builder_uri{ data });
    auto res = http::sync(req);
    auto body = res->get_body();
    /**/
@@ -123,7 +123,7 @@ std::string std::oauth_v2::builder::request(std::string const & uri, std::string
    data.append(params);
    data.append("&access_token=").append(m_config->auth_code);
    /* make call */
-   auto req = make_shared<http_request>(builder_uri(data));
+   auto req = make_shared<http_request>(builder_uri{ data });
    auto res = http::sync(req);
    auto body = res->get_body();
    /**/
@@ -140,7 +140,7 @@ bool std::oauth_v2::builder::set_google_file_token(std::string const & json_toke
       /**/
       if (body.empty())
       {
-         throw std::exception("client file key is empty!!!");
+         throw std::exception{ "client file key is empty!!!" };
       }
       /**/
       m_google->auth_provider_x509_cert_url = body["auth_provider_x509_cert_url"].get<string>();

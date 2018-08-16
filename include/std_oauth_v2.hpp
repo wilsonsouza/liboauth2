@@ -9,7 +9,7 @@
 *  Created oct 10 2017
 *  Last updated 8/16/2018
 *  Version 0.1-beta
-* 
+*  Version 0.2-beta
 *  Deenpencies: restbed, libjson
 */
 #pragma once
